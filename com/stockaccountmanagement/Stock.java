@@ -2,7 +2,6 @@ package com.stockaccountmanagement;
 
 public class Stock {
 
-
 	String shareName;
 	int numOfShare;
 	double sharePrice;
@@ -15,17 +14,42 @@ public class Stock {
 		this.sharePrice = sharePrice;
 	}
 
-		@Override
-	public String toString() {
-		return "Share [shareName=" + shareName
-				+ ", numOfShare=" + numOfShare
-				+ ", sharePrice=" + sharePrice + "]";
+	public String getShareName() {
+		return shareName;
 	}
 
-		public double getStockValue() {
-				double stockvalue = numOfShare*sharePrice;
-				return stockvalue;
-			}
+	public void setShareName(String shareName) {
+		this.shareName = shareName;
+	}
+
+	public int getNumOfShare() {
+		return numOfShare;
+	}
+
+	public void setNumOfShare(int numOfShare) {
+		this.numOfShare = numOfShare;
+	}
+
+	public double getSharePrice() {
+		return sharePrice;
+	}
+
+	public void setSharePrice(double sharePrice) {
+		this.sharePrice = sharePrice;
+	}
+
+	@Override
+	public String toString() {
+		return "Stock [shareName=" + shareName
+				+ ", numOfShare=" + numOfShare
+				+ ", sharePrice=" + sharePrice
+				+ ", getStockValue()=" + getStockValue()
+				+ "]";
+	}
+
+	public double getStockValue() {
+		double stockvalue = numOfShare * sharePrice;
+		return stockvalue;
+	}
 
 }
-
