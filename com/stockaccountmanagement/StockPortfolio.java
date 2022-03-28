@@ -26,7 +26,7 @@ public class StockPortfolio {
 					sharePrice));
 		}
 		System.out.println(list + "\n");
-		sc.close();
+//		sc.close();
 	}
 
 	public void eachStockValue() {
@@ -36,11 +36,9 @@ public class StockPortfolio {
 			double stockValue = stock.getSharePrice()
 					* stock.getNumOfShare();
 			System.out.println("The stock value of "
-
 					+ stock.getShareName() + " is : "
-					+ stockValue);
+					+ stockValue + "\n");
 		}
-
 	}
 
 	public double getTotalStockValue() {
@@ -53,14 +51,18 @@ public class StockPortfolio {
 
 	public static void main(String[] args) {
 
-		System.out.println("Enter the number of Stocks : ");
+		System.out.println("Enter the number of Stocks :");
 
 		StockPortfolio stockpotfolio = new StockPortfolio();
 		stockpotfolio.readValues();
 		stockpotfolio.eachStockValue();
 		stockpotfolio.getTotalStockValue();
+
 		System.out.println("The value of total stock is : "
-				+ stockpotfolio.getTotalStockValue());
+				+ stockpotfolio.getTotalStockValue()
+				+ "\n");
+		Account account = new Account();
+		account.debit();
 	}
 
 }
